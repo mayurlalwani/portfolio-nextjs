@@ -2,6 +2,7 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import Footer from "@/components/Footer";
 
 export default function RootLayout({
   children,
@@ -14,6 +15,7 @@ export default function RootLayout({
         <ThemeProvider enableSystem={true} attribute="class">
           <Navbar />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
