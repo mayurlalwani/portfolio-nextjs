@@ -6,25 +6,20 @@ import SlideUp from "./SlideUp";
 
 const projects = [
   {
-    name: "",
-    description: "",
-    image: "",
-    github: "",
-    link: "",
+    name: "Note sharing app",
+    description:
+      "A collaborative Note sharing app that offers a simple and intuitive interface that makes it easy for users to create, edit, and share notes",
+    image: "/images/note-app.png",
+    github: "https://github.com/mayurlalwani/notes-app-mern",
+    link: "https://notes-mern-app.onrender.com/",
   },
   {
-    name: "",
-    description: "",
-    image: "",
-    github: "",
-    link: "",
-  },
-  {
-    name: "",
-    description: "",
-    image: "",
-    github: "",
-    link: "",
+    name: "Resume Builder",
+    description:
+      "An online platform that helps users create professional-looking resumes quickly and easily",
+    github: "https://github.com/mayurlalwani/resume-builder-mern",
+    image: "/images/resume-builder.png",
+    link: "https://resume-builder-ubbt.onrender.com/",
   },
 ];
 
