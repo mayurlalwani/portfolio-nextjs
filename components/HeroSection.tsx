@@ -40,6 +40,13 @@ const HeroSection = () => {
           >
             Projects
           </Link>
+          <a
+            target="_blank"
+            href="https://drive.google.com/file/d/1Ticlbxrsx_k9Let0Bk9yfH8gB3ecAoM-/view?usp=share_link"
+            className="text-neutral-100 font-semibold px-6 py-3 ml-3 bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer"
+          >
+            Resume
+          </a>
         </div>
       </div>
       <div className="flex flex-row items-center text-center justify-center ">
