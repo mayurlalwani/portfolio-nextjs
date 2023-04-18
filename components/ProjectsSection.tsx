@@ -8,7 +8,7 @@ const projects = [
   {
     name: "Note sharing app",
     description:
-      "A collaborative Note sharing app that offers a simple and intuitive interface that makes it easy for users to create, edit, and share notes",
+      "A collaborative note sharing app that offers a simple and intuitive interface that makes it easy for users to create, edit, and share notes.",
     image: "/images/note-app.png",
     github: "https://github.com/mayurlalwani/notes-app-mern",
     link: "https://notes-mern-app.onrender.com/",
@@ -16,7 +16,7 @@ const projects = [
   {
     name: "Resume Builder",
     description:
-      "An online platform that helps users create professional-looking resumes quickly and easily",
+      "An online platform that helps users create professional-looking resume quickly and easily.",
     github: "https://github.com/mayurlalwani/resume-builder-mern",
     image: "/images/resume-builder.png",
     link: "https://resume-builder-ubbt.onrender.com/",
@@ -49,7 +49,9 @@ const ProjectsSection = () => {
                     </Link>
                   </div>
                   <div className="md:w-1/2">
-                    <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
+                    <h1 className="text-4xl mt-4 font-bold mb-6">
+                      {project.name}
+                    </h1>
                     <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
                       {project.description}
                     </p>

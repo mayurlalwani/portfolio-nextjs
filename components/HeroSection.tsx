@@ -18,10 +18,10 @@ const HeroSection = () => {
           />
         </div>
         <div className="md:mt-2 md:w-3/5">
-          <h1 className="text-4xl font-bold mt-6 md:mt-0 md:text-6xl">
+          <h1 className="text-4xl font-bold mt-6 md:mt-0 md:text-5xl">
             Hi, I&#39;m Mayur Lalwani!
           </h1>
-          <p className="text-lg mt-4 mb-6 md:text-2xl">
+          <p className="text-lg mt-4 mb-6 md:text-2xl text-justify">
             I&#39;m a{" "}
             <span className="font-semibold text-teal-600">
               Software Engineer{" "}
@@ -29,21 +29,10 @@ const HeroSection = () => {
             from India. Working towards creating software that makes life easier
             and more meaningful.
           </p>
-          <Link
-            to="projects"
-            className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-          >
-            Projects
-          </Link>
           <a
             target="_blank"
             href="https://drive.google.com/file/d/1Ticlbxrsx_k9Let0Bk9yfH8gB3ecAoM-/view?usp=share_link"
-            className="text-neutral-100 font-semibold px-6 py-3 ml-3 bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer"
+            className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer"
           >
             Resume
           </a>

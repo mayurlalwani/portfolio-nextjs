@@ -29,7 +29,7 @@ const AboutSection = () => {
             <h1 className="text-center text-2xl font-bold mb-6 md:text-left">
               Get to know me!
             </h1>
-            <p>
+            <p className="text-justify">
               Hi, my name is Mayur and I am a{" "}
               <span className="font-bold">{"highly ambitious"}</span>,
               <span className="font-bold">{" self-motivated"}</span>, and
@@ -37,20 +37,20 @@ const AboutSection = () => {
               based out of India.
             </p>
             <br />
-            <p>
+            <p className="text-justify">
               I graduated from DA-IICT, Gandhinagar, in 2019 with a MS in
               Information Technology and have been working in the field ever
               since.
             </p>
             <br />
-            <p>
+            <p className="text-justify">
               I have a wide range of hobbies and passions that keep me busy.
               From reading, traveling, to watching movies, I am always seeking
               new experiences and love to keep myself engaged and learning new
               things.
             </p>
             <br />
-            <p>
+            <p className="text-justify">
               I believe that you should{" "}
               <span className="font-bold text-teal-500">
                 never stop growing
