@@ -7,11 +7,12 @@ const skills = [
   { skill: "JavaScript" },
   { skill: "TypeScript" },
   { skill: "React" },
-  { skill: "Next.js" },
+  { skill: "Redux" },
+  { skill: "NextJs" },
   { skill: "NodeJs" },
   { skill: "ExpressJs" },
+  { skill: "GraphQL" },
   { skill: "MySQL" },
-  { skill: "Tailwind CSS" },
   { skill: "Git" },
 ];
 
@@ -33,32 +34,29 @@ const AboutSection = () => {
               Hi, my name is Mayur and I am a{" "}
               <span className="font-bold">{"highly ambitious"}</span>,
               <span className="font-bold">{" self-motivated"}</span>, and
-              <span className="font-bold">{" driven"}</span> software engineer
-              based out of India.
+              <span className="font-bold">{" driven"}</span> software developer.
             </p>
             <br />
             <p className="text-justify">
-              I graduated from DA-IICT, Gandhinagar, in 2019 with a MS in
-              Information Technology and have been working in the field ever
-              since.
+              With 3 years of experience in the industry, I have developed a
+              strong foundation in full stack development. Throughout my career,
+              I have worked on a variety of projects, from small-scale web
+              applications to large enterprise systems.
             </p>
             <br />
             <p className="text-justify">
-              I have a wide range of hobbies and passions that keep me busy.
-              From reading, traveling, to watching movies, I am always seeking
-              new experiences and love to keep myself engaged and learning new
-              things.
+              As a freelancer, I am committed to delivering projects on time and
+              within budget, while maintaining a high standard of quality. I am
+              a quick learner and always looking for new challenges to expand my
+              skill set. I have experience working both independently and as
+              part of a team, and I am comfortable communicating with clients
+              and stakeholders at all levels.
             </p>
             <br />
             <p className="text-justify">
-              I believe that you should{" "}
-              <span className="font-bold text-teal-500">
-                never stop growing
-              </span>{" "}
-              and that&#39;s what I strive to do, I have a passion for
-              technology and a desire to always push the limits of what is
-              possible. I am excited to see where my career takes me and am
-              always open to new opportunities. 🙂
+              I have a passion for technology and a desire to always push the
+              limits of what is possible. I am excited to see where my career
+              takes me and am always open to new opportunities.
             </p>
           </div>
           <div className="text-center md:w-1/2 md:text-left">
