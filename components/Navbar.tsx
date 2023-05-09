@@ -80,6 +80,9 @@ export default function Navbar() {
                       href="https://mayurlalwani.hashnode.dev"
                       target="_blank"
                       key={idx}
+                      className={
+                        "block lg:inline-block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100 cursor-pointer"
+                      }
                     >
                       {item.label}
                     </Link>
