@@ -1,8 +1,8 @@
-"use client"; // this is a client component
-import React from "react";
-import Image from "next/image";
-import { Link } from "react-scroll/modules";
-import { HiArrowDown } from "react-icons/hi";
+'use client'; // this is a client component
+import React from 'react';
+import Image from 'next/image';
+import { Link } from 'react-scroll/modules';
+import { HiArrowDown } from 'react-icons/hi';
 
 const HeroSection = () => {
   return (
@@ -22,16 +22,16 @@ const HeroSection = () => {
             Hi, I&#39;m Mayur Lalwani!
           </h1>
           <p className="text-lg mt-4 mb-6 md:text-2xl text-justify">
-            I&#39;m a{" "}
+            I&#39;m a{' '}
             <span className="font-semibold text-teal-600">
-              Software Engineer{" "}
+              Software Engineer{' '}
             </span>
             from India. Working towards creating software that makes life easier
             and more meaningful.
           </p>
           <a
             target="_blank"
-            href="https://drive.google.com/file/d/1Ticlbxrsx_k9Let0Bk9yfH8gB3ecAoM-/view?usp=share_link"
+            href="https://drive.google.com/file/d/149i6SG1XdYmiWCAy1Vo1nxB1n64nDtNU/view?usp=share_link"
             className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer"
           >
             Resume
