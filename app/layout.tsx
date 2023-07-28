@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Footer from "@/components/Footer";
 import Head from "./head";
+import { Analytics } from '@vercel/analytics/react';
 
 export default function RootLayout({
   children,
@@ -11,6 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+    <Analytics />
     <html lang="en">
       <Head />
       <body className="dark:bg-stone-900">
