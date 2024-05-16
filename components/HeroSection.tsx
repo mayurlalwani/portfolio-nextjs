@@ -31,7 +31,7 @@ const HeroSection = () => {
           </p>
           <a
             target='_blank'
-            href='https://drive.google.com/file/d/149i6SG1XdYmiWCAy1Vo1nxB1n64nDtNU/view?usp=share_link'
+            href='https://drive.google.com/file/d/1DYcigro1hQhzouLTdJKaqUFdz5TjIExm/view?usp=sharing'
             className='text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer'
           >
             Resume
