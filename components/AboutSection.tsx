@@ -38,7 +38,7 @@ const AboutSection = () => {
             </p>
             <br />
             <p className="text-justify">
-              With 3 years of experience in the industry, I have developed a
+              With 5 years of experience in the industry, I have developed a
               strong foundation in full stack development. Throughout my career,
               I have worked on a variety of projects, from small-scale web
               applications to large enterprise systems.
