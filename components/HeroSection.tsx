@@ -27,15 +27,17 @@ const HeroSection = () => {
               Software Engineer{' '}
             </span>
             from India. Working towards creating software that makes life easier
-            and more meaningful.
+            and more meaningful. I have a passion for learning new technologies
+            and continuously improving my skills. Let's build something amazing
+            together!
           </p>
-          <a
+          {/* <a
             target='_blank'
             href='https://drive.google.com/file/d/1DYcigro1hQhzouLTdJKaqUFdz5TjIExm/view?usp=sharing'
             className='text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer'
           >
             Resume
-          </a>
+          </a> */}
         </div>
       </div>
       <div className='flex flex-row items-center text-center justify-center '>
