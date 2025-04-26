@@ -6,28 +6,20 @@ import SlideUp from './SlideUp';
 
 const projects = [
   {
-    name: 'Note sharing app',
-    description:
-      'A collaborative note sharing app that offers a simple and intuitive interface that makes it easy for users to create, edit, and share notes.',
-    image: '/images/note-app.png',
-    github: 'https://github.com/mayurlalwani/notes-app-mern',
-    link: 'https://notes-mern-app.onrender.com/',
-  },
-  {
-    name: 'Resume Builder',
-    description:
-      'An online platform that helps users create professional-looking resume quickly and easily.',
-    github: 'https://github.com/mayurlalwani/resume-builder-mern',
-    image: '/images/resume-builder.png',
-    link: 'https://resume-builder-ubbt.onrender.com/',
-  },
-  {
     name: 'Dentist Management System',
     description:
       'A comprehensive web application designed specifically for dental practices. It helps dentists manage their appointments, patients, and staff efficiently. The application includes features such as appointment scheduling, patient records management and staff management. It aims to streamline the workflow, reduce administrative burden, and enhance patient care.',
     github: 'https://github.com/mayurlalwani/dentist-app',
     image: '/images/Dentistapp.png',
     link: 'https://dentist-app-phi.vercel.app/',
+  },
+  {
+    name: 'Resume Builder',
+    description:
+      'An online platform that helps users create professional-looking resume quickly and easily.',
+    github: 'https://github.com/mayurlalwani/resume-builder-mern',
+    image: '/images/resume-img.png',
+    link: 'https://ai-powered-resume-builder-bay.vercel.app/',
   },
 ];
 
