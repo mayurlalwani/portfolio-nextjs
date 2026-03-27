@@ -1,80 +1,57 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react';
+import SlideUp from './SlideUp';
 
 const skills = [
-  { skill: "HTML" },
-  { skill: "CSS" },
-  { skill: "JavaScript" },
-  { skill: "TypeScript" },
-  { skill: "React" },
-  { skill: "Redux" },
-  { skill: "NextJs" },
-  { skill: "NodeJs" },
-  { skill: "ExpressJs" },
-  { skill: "GraphQL" },
-  { skill: "MySQL" },
-  { skill: "Git" },
+  'TypeScript', 'React', 'Next.js', 'Node.js',
+  'Express', 'GraphQL', 'MySQL', 'PostgreSQL',
+  'Android (Kotlin)', 'OpenAI API', 'Tailwind CSS', 'Git',
 ];
 
 const AboutSection = () => {
   return (
-    <section id="about">
-      <div className="my-12 pb-12 md:pt-16 md:pb-48">
-        <h1 className="text-center font-bold text-4xl">
-          About Me
-          <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
-        </h1>
+    <section id='about' className='py-20 border-t border-neutral-100 dark:border-stone-800'>
+      <div className='max-w-6xl mx-auto'>
+        <SlideUp offset='-200px 0px -200px 0px'>
+          <div className='flex flex-col md:flex-row gap-14 animate-slideUpCubiBezier'>
+            <div className='flex-1'>
+              <h2 className='text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-5'>
+                About me
+              </h2>
+              <div className='space-y-4 text-neutral-600 dark:text-neutral-400 leading-relaxed'>
+                <p>
+                  I&#39;m a full-stack developer with 5+ years of experience building
+                  products across web, mobile, and AI. I care deeply about clean code,
+                  fast interfaces, and software that solves real problems.
+                </p>
+                <p>
+                  Beyond client work, I&#39;m an indie builder — I regularly ship side
+                  projects, explore new tools, and write about what I learn. I&#39;m
+                  comfortable working end-to-end: from database schema to polished UI.
+                </p>
+                <p>
+                  Currently open to freelance projects and full-time opportunities where
+                  I can make a meaningful impact.
+                </p>
+              </div>
+            </div>
 
-        <div className="flex flex-col space-y-10 items-stretch justify-center align-top md:space-x-10 md:space-y-0 md:p-4 md:flex-row md:text-left">
-          <div className="md:w-1/2 ">
-            <h1 className="text-center text-2xl font-bold mb-6 md:text-left">
-              Get to know me!
-            </h1>
-            <p className="text-justify">
-              Hi, my name is Mayur and I am a{" "}
-              <span className="font-bold">{"highly ambitious"}</span>,
-              <span className="font-bold">{" self-motivated"}</span>, and
-              <span className="font-bold">{" driven"}</span> software developer.
-            </p>
-            <br />
-            <p className="text-justify">
-              With 5 years of experience in the industry, I have developed a
-              strong foundation in full stack development. Throughout my career,
-              I have worked on a variety of projects, from small-scale web
-              applications to large enterprise systems.
-            </p>
-            <br />
-            <p className="text-justify">
-              As a freelancer, I am committed to delivering projects on time and
-              within budget, while maintaining a high standard of quality. I am
-              a quick learner and always looking for new challenges to expand my
-              skill set. I have experience working both independently and as
-              part of a team, and I am comfortable communicating with clients
-              and stakeholders at all levels.
-            </p>
-            <br />
-            <p className="text-justify">
-              I have a passion for technology and a desire to always push the
-              limits of what is possible. I am excited to see where my career
-              takes me and am always open to new opportunities.
-            </p>
-          </div>
-          <div className="text-center md:w-1/2 md:text-left">
-            <h1 className="text-2xl font-bold mb-6">My Skills</h1>
-            <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
-              {skills.map((item, idx) => {
-                return (
-                  <p
+            <div className='md:w-72 lg:w-80'>
+              <h2 className='text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-5'>
+                Skills
+              </h2>
+              <div className='flex flex-wrap gap-2'>
+                {skills.map((skill, idx) => (
+                  <span
                     key={idx}
-                    className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold"
+                    className='px-3 py-1.5 text-sm bg-neutral-100 dark:bg-stone-800 text-neutral-600 dark:text-neutral-300 rounded-md font-medium'
                   >
-                    {item.skill}
-                  </p>
-                );
-              })}
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+        </SlideUp>
       </div>
     </section>
   );

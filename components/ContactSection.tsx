@@ -1,146 +1,114 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import React, { useState } from 'react';
+import React from 'react';
+import SlideUp from './SlideUp';
 import { AiOutlineMail } from 'react-icons/ai';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 
 const Contact = () => {
   return (
-    <div id='contact' className='w-full lg:h-screen'>
-      <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
-        <h1 className='my-10 text-center font-bold text-4xl'>Contact</h1>
-        <div className='grid lg:grid-cols-5 gap-8'>
-          {/* left */}
-          <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
-            <div className='lg:p-4 h-full '>
-              <div className='w-full'>
-                <Image
-                  className='rounded-xl hover:scale-105 ease-in duration-300'
-                  src='/images/contact.jpg'
-                  alt='/'
-                  width={500}
-                  height={300}
-                />
-              </div>
-              <div>
-                <h2 className='text-4xl font-bold'>Mayur Lalwani</h2>
+    <section id='contact' className='py-20 border-t border-neutral-100 dark:border-stone-800'>
+      <div className='max-w-6xl mx-auto'>
+        <SlideUp offset='-200px 0px -200px 0px'>
+          <div className='animate-slideUpCubiBezier flex flex-col md:flex-row gap-14'>
+            {/* Left */}
+            <div className='md:w-80 flex-shrink-0'>
+              <h2 className='text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-3'>
+                Get in touch
+              </h2>
+              <p className='text-neutral-500 dark:text-neutral-400 leading-relaxed mb-8 text-sm'>
+                Open to freelance projects and full-time opportunities.
+                Whether you have a project in mind or just want to say hello — my inbox is open.
+              </p>
 
-                <h3 className='text mt-2 5xl font-bold mb-6'>
-                  Software Engineer
-                </h3>
-                <p className='text-xl leading-7 mb-6 text-neutral-600 dark:text-neutral-400'>
-                  I am available for freelance or full-time positions. Contact
-                  me and let&apos;s talk.
-                </p>
-              </div>
-              <div>
-                <h4 className='text 5xl font-bold'>Connect With Me</h4>
-                <div className='flex items-center justify-between py-4'>
-                  <a
-                    href='https://www.linkedin.com/in/mayurlalwani/'
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                      <FaLinkedinIn />
-                    </div>
-                  </a>
-                  <a
-                    href='https://github.com/mayurlalwani'
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                      <FaGithub />
-                    </div>
-                  </a>
-                  <a
-                    href='mailto:lalwanimayur06@gmail.com'
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                      <AiOutlineMail />
-                    </div>
-                  </a>
-                </div>
+              <div className='space-y-3'>
+                <a
+                  href='mailto:lalwanimayur06@gmail.com'
+                  className='flex items-center gap-3 text-sm text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors group'
+                >
+                  <span className='p-2 rounded-lg bg-neutral-100 dark:bg-stone-800 group-hover:bg-neutral-200 dark:group-hover:bg-stone-700 transition-colors'>
+                    <AiOutlineMail size={16} />
+                  </span>
+                  lalwanimayur06@gmail.com
+                </a>
+                <a
+                  href='https://github.com/mayurlalwani'
+                  target='_blank'
+                  rel='noreferrer'
+                  className='flex items-center gap-3 text-sm text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors group'
+                >
+                  <span className='p-2 rounded-lg bg-neutral-100 dark:bg-stone-800 group-hover:bg-neutral-200 dark:group-hover:bg-stone-700 transition-colors'>
+                    <FaGithub size={16} />
+                  </span>
+                  github.com/mayurlalwani
+                </a>
+                <a
+                  href='https://www.linkedin.com/in/mayurlalwani/'
+                  target='_blank'
+                  rel='noreferrer'
+                  className='flex items-center gap-3 text-sm text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors group'
+                >
+                  <span className='p-2 rounded-lg bg-neutral-100 dark:bg-stone-800 group-hover:bg-neutral-200 dark:group-hover:bg-stone-700 transition-colors'>
+                    <FaLinkedinIn size={16} />
+                  </span>
+                  linkedin.com/in/mayurlalwani
+                </a>
               </div>
             </div>
-          </div>
 
-          {/* right */}
-          <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
-            <div className='p-4'>
+            {/* Form */}
+            <div className='flex-1'>
               <form
                 action='https://getform.io/f/f8f3f125-bad4-4d43-b3dd-8014a7b581ba'
                 method='POST'
                 encType='multipart/form-data'
+                className='space-y-4'
               >
-                <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
-                  <div className='flex flex-col'>
-                    <label className='uppercase text-sm py-2'>Name</label>
-                    <input
-                      className='border-2 rounded-lg p-3 flex border-gray-300'
-                      type='text'
-                      name='name'
-                    />
-                  </div>
-                  <div className='flex flex-col'>
-                    <label className='uppercase text-sm py-2'>
-                      Phone Number
+                <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+                  <div className='flex flex-col gap-1.5'>
+                    <label className='text-xs font-medium text-neutral-500 dark:text-neutral-400 uppercase tracking-wide'>
+                      Name
                     </label>
                     <input
-                      className='border-2 rounded-lg p-3 flex border-gray-300'
                       type='text'
-                      name='phone'
+                      name='name'
+                      placeholder='Your name'
+                      className='px-3 py-2.5 text-sm rounded-lg border border-neutral-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-neutral-900 dark:text-neutral-100 placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:ring-2 focus:ring-teal-500/30 focus:border-teal-500 dark:focus:border-teal-400 transition-colors'
+                    />
+                  </div>
+                  <div className='flex flex-col gap-1.5'>
+                    <label className='text-xs font-medium text-neutral-500 dark:text-neutral-400 uppercase tracking-wide'>
+                      Email
+                    </label>
+                    <input
+                      type='email'
+                      name='email'
+                      placeholder='you@example.com'
+                      className='px-3 py-2.5 text-sm rounded-lg border border-neutral-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-neutral-900 dark:text-neutral-100 placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:ring-2 focus:ring-teal-500/30 focus:border-teal-500 dark:focus:border-teal-400 transition-colors'
                     />
                   </div>
                 </div>
-                <div className='flex flex-col py-2'>
-                  <label className='uppercase text-sm py-2'>Email</label>
-                  <input
-                    className='border-2 rounded-lg p-3 flex border-gray-300'
-                    type='email'
-                    name='email'
-                  />
-                </div>
-                <div className='flex flex-col py-2'>
-                  <label className='uppercase text-sm py-2'>Subject</label>
-                  <input
-                    className='border-2 rounded-lg p-3 flex border-gray-300'
-                    type='text'
-                    name='subject'
-                  />
-                </div>
-                <div className='flex flex-col py-2'>
-                  <label className='uppercase text-sm py-2'>Message</label>
+                <div className='flex flex-col gap-1.5'>
+                  <label className='text-xs font-medium text-neutral-500 dark:text-neutral-400 uppercase tracking-wide'>
+                    Message
+                  </label>
                   <textarea
-                    className='border-2 rounded-lg p-3 border-gray-300'
-                    rows={10}
                     name='message'
-                  ></textarea>
+                    rows={6}
+                    placeholder="Tell me about your project or opportunity..."
+                    className='px-3 py-2.5 text-sm rounded-lg border border-neutral-200 dark:border-stone-700 bg-white dark:bg-stone-900 text-neutral-900 dark:text-neutral-100 placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:ring-2 focus:ring-teal-500/30 focus:border-teal-500 dark:focus:border-teal-400 transition-colors resize-none'
+                  />
                 </div>
                 <button
-                  // className="w-full p-4 text-gray-100 mt-4"
-                  className='w-full mt-4 text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer'
+                  type='submit'
+                  className='w-full sm:w-auto px-6 py-2.5 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-sm font-semibold rounded-lg hover:bg-neutral-700 dark:hover:bg-neutral-200 transition-colors'
                 >
                   Send Message
                 </button>
               </form>
             </div>
           </div>
-        </div>
-        <div className='flex justify-center py-12'>
-          <Link href='/'>
-            <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
-              <HiOutlineChevronDoubleUp className='text-[#5651e5]' size={30} />
-            </div>
-          </Link>
-        </div>
+        </SlideUp>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,49 +1,40 @@
-import React from "react";
-import {
-  AiOutlineGithub,
-  AiOutlineTwitter,
-  AiOutlineLinkedin,
-} from "react-icons/ai";
+import React from 'react';
+import { AiOutlineGithub, AiOutlineTwitter, AiOutlineLinkedin } from 'react-icons/ai';
 
 const Footer = () => {
   return (
-    <footer className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
-      <hr className="w-full h-0.5 mx-auto mt-8 bg-neutral-200 border-0"></hr>
-      <div className="mx-auto  p-4 flex flex-col text-center text-neutral-900 md:flex-row md:justify-between">
-        <div className="flex flex-row items-center justify-center space-x-1 text-neutral-500 dark:text-neutral-100">
-          © 2023 Mayur Lalwani<a href="/" className="hover:underline"></a>
-        </div>
-        <div className="flex flex-row items-center justify-center space-x-2 mb-1">
+    <footer className='border-t border-neutral-100 dark:border-stone-800'>
+      <div className='max-w-6xl mx-auto px-6 sm:px-10 py-8 flex flex-col sm:flex-row items-center justify-between gap-4'>
+        <span className='text-sm text-neutral-400 dark:text-neutral-500'>
+          © 2025 Mayur Lalwani
+        </span>
+        <div className='flex items-center gap-4'>
           <a
-            href="https://github.com/mayurlalwani"
-            rel="noreferrer"
-            target="_blank"
+            href='https://github.com/mayurlalwani'
+            target='_blank'
+            rel='noreferrer'
+            aria-label='GitHub'
+            className='text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 transition-colors'
           >
-            <AiOutlineGithub
-              className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
-              size={30}
-            />
+            <AiOutlineGithub size={20} />
           </a>
           <a
-            href="https://twitter.com/mayurlalwani3"
-            rel="noreferrer"
-            target="_blank"
+            href='https://twitter.com/mayurlalwani3'
+            target='_blank'
+            rel='noreferrer'
+            aria-label='Twitter'
+            className='text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 transition-colors'
           >
-            <AiOutlineTwitter
-              className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
-              size={30}
-            />
+            <AiOutlineTwitter size={20} />
           </a>
-
           <a
-            href="https://www.linkedin.com/in/mayurlalwani/"
-            rel="noreferrer"
-            target="_blank"
+            href='https://www.linkedin.com/in/mayurlalwani/'
+            target='_blank'
+            rel='noreferrer'
+            aria-label='LinkedIn'
+            className='text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 transition-colors'
           >
-            <AiOutlineLinkedin
-              className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
-              size={30}
-            />
+            <AiOutlineLinkedin size={20} />
           </a>
         </div>
       </div>

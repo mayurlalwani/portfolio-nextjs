@@ -1,16 +1,15 @@
-import AboutSection from "@/components/AboutSection";
-import Contact from "@/components/ContactSection";
-import HeroSection from "@/components/HeroSection";
-import ProjectsSection from "@/components/ProjectsSection";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import HeroSection from '@/components/HeroSection';
+import AboutSection from '@/components/AboutSection';
+import ServicesSection from '@/components/ServicesSection';
+import ProjectsSection from '@/components/ProjectsSection';
+import Contact from '@/components/ContactSection';
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-7xl ">
+    <main className='px-6 sm:px-10'>
       <HeroSection />
       <AboutSection />
+      <ServicesSection />
       <ProjectsSection />
       <Contact />
     </main>

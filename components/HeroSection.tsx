@@ -1,56 +1,60 @@
-'use client'; // this is a client component
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import { Link } from 'react-scroll/modules';
-import { HiArrowDown } from 'react-icons/hi';
 
 const HeroSection = () => {
   return (
-    <section id='home'>
-      <div className='flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left'>
-        <div className='md:mt-2 md:w-1/2'>
-          <Image
-            src='/images/mayur.jpg'
-            alt='image'
-            width={300}
-            height={300}
-            className='rounded-full shadow-2xl'
-          />
-        </div>
-        <div className='md:mt-2 md:w-3/5'>
-          <h1 className='text-4xl font-bold mt-6 md:mt-0 md:text-5xl'>
-            Hi, I&#39;m Mayur Lalwani!
-          </h1>
-          <p className='text-lg mt-4 mb-6 md:text-2xl text-justify'>
-            I&#39;m a{' '}
-            <span className='font-semibold text-teal-600'>
-              Software Engineer{' '}
-            </span>
-            from India. Working towards creating software that makes life easier
-            and more meaningful. I have a passion for learning new technologies
-            and continuously improving my skills. Let's build something amazing
-            together!
+    <section id='home' className='pt-32 pb-20 md:pt-40 md:pb-32'>
+      <div className='max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16'>
+        {/* Text */}
+        <div className='flex-1 text-center md:text-left animate-fadeIn'>
+          <p className='text-sm font-medium text-teal-600 dark:text-teal-400 mb-3 tracking-wide uppercase'>
+            Full-Stack Developer · Indie Builder
           </p>
-          {/* <a
-            target='_blank'
-            href='https://drive.google.com/file/d/1DYcigro1hQhzouLTdJKaqUFdz5TjIExm/view?usp=sharing'
-            className='text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer'
-          >
-            Resume
-          </a> */}
+          <h1 className='text-4xl sm:text-5xl md:text-[3.25rem] font-bold leading-[1.15] tracking-tight text-neutral-900 dark:text-neutral-100 mb-5'>
+            I build web apps, AI tools,<br className='hidden sm:block' /> and things that{' '}
+            <span className='text-teal-600 dark:text-teal-400'>actually ship.</span>
+          </h1>
+          <p className='text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed mb-8 max-w-xl mx-auto md:mx-0'>
+            I&#39;m Mayur — a full-stack developer from India who turns ideas into
+            production-ready web apps, AI-powered SaaS products, and Android applications.
+            5+ years of shipping real products for real users.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-3 justify-center md:justify-start'>
+            <Link
+              to='contact'
+              smooth={true}
+              offset={-56}
+              duration={400}
+              className='inline-flex items-center justify-center px-6 py-3 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 text-sm font-semibold rounded-lg hover:bg-neutral-700 dark:hover:bg-neutral-200 transition-colors cursor-pointer'
+            >
+              Hire Me
+            </Link>
+            <Link
+              to='projects'
+              smooth={true}
+              offset={-56}
+              duration={400}
+              className='inline-flex items-center justify-center px-6 py-3 border border-neutral-200 dark:border-stone-700 text-neutral-700 dark:text-neutral-300 text-sm font-semibold rounded-lg hover:border-neutral-400 dark:hover:border-stone-500 hover:bg-neutral-50 dark:hover:bg-stone-800 transition-colors cursor-pointer'
+            >
+              See My Work
+            </Link>
+          </div>
         </div>
-      </div>
-      <div className='flex flex-row items-center text-center justify-center '>
-        <Link
-          to='about'
-          activeClass='active'
-          spy={true}
-          smooth={true}
-          offset={-100}
-          duration={500}
-        >
-          <HiArrowDown size={35} className='animate-bounce' />
-        </Link>
+
+        {/* Photo */}
+        <div className='flex-shrink-0 animate-fadeIn animation-delay-2'>
+          <div className='relative w-52 h-52 md:w-64 md:h-64'>
+            <Image
+              src='/images/mayur.jpeg'
+              alt='Mayur Lalwani'
+              fill
+              className='rounded-full object-cover object-top shadow-lg ring-4 ring-neutral-100 dark:ring-stone-800'
+              priority
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-'use client'; // this is a client component
+'use client';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -12,26 +12,11 @@ interface NavItem {
 }
 
 const NAV_ITEMS: Array<NavItem> = [
-  {
-    label: 'Home',
-    page: 'home',
-  },
-  {
-    label: 'About',
-    page: 'about',
-  },
-  {
-    label: 'Projects',
-    page: 'projects',
-  },
-  {
-    label: 'Blogs',
-    page: 'Blogs',
-  },
-  {
-    label: 'Contact',
-    page: 'contact',
-  },
+  { label: 'Home', page: 'home' },
+  { label: 'About', page: 'about' },
+  { label: 'Services', page: 'services' },
+  { label: 'Projects', page: 'projects' },
+  { label: 'Contact', page: 'contact' },
 ];
 
 export default function Navbar() {
@@ -39,93 +24,88 @@ export default function Navbar() {
   const currentTheme = theme === 'system' ? systemTheme : theme;
   const [navbar, setNavbar] = useState(false);
 
-  const handleClick = (label: string) => {
-    setNavbar(!navbar);
-  };
-
   return (
-    <header className='w-full mx-auto  px-4 sm:px-20 fixed top-0 z-50 shadow bg-white dark:bg-stone-900 dark:border-b dark:border-stone-600'>
-      <div className='justify-between md:items-center md:flex'>
-        <div>
-          <div className='flex items-center justify-between py-3 md:py-5 md:block'>
-            <ScrollLink to='home'>
-              <div className='container flex items-center space-x-2'>
-                <h2 className='text-2xl text-black font-bold cursor-pointer'>
-                  Mayur Lalwani
-                </h2>
-              </div>
-            </ScrollLink>
-            <div className='md:hidden'>
-              <button
-                className='p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border'
-                onClick={() => setNavbar(!navbar)}
-              >
-                {navbar ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}
-              </button>
-            </div>
-          </div>
-        </div>
+    <header className='w-full mx-auto px-6 sm:px-10 fixed top-0 z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-sm border-b border-neutral-100 dark:border-stone-800'>
+      <div className='max-w-6xl mx-auto flex items-center justify-between h-14'>
+        <ScrollLink to='home' className='cursor-pointer'>
+          <span className='text-sm font-semibold tracking-tight text-neutral-900 dark:text-neutral-100'>
+            Mayur Lalwani
+          </span>
+        </ScrollLink>
 
-        <div>
-          <div
-            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-              navbar ? 'block' : 'hidden'
-            }`}
+        {/* Desktop nav */}
+        <nav className='hidden md:flex items-center space-x-7'>
+          {NAV_ITEMS.map((item, idx) => (
+            <ScrollLink
+              key={idx}
+              to={item.page}
+              activeClass='text-neutral-900 dark:text-neutral-100'
+              spy={true}
+              smooth={true}
+              offset={-56}
+              duration={400}
+              onClick={() => setNavbar(false)}
+              className='text-sm text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 transition-colors cursor-pointer'
+            >
+              {item.label}
+            </ScrollLink>
+          ))}
+          <button
+            onClick={() => setTheme(currentTheme === 'dark' ? 'light' : 'dark')}
+            className='p-1.5 rounded-md text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-stone-800 transition-colors'
+            aria-label='Toggle theme'
           >
-            <div className='items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0'>
-              {NAV_ITEMS.map((item, idx) => {
-                if (item.label === 'Blogs') {
-                  return (
-                    <Link
-                      href='https://mayurlalwani.hashnode.dev'
-                      target='_blank'
-                      key={idx}
-                      className={
-                        'block lg:inline-block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100 cursor-pointer'
-                      }
-                    >
-                      {item.label}
-                    </Link>
-                  );
-                } else {
-                  return (
-                    <ScrollLink
-                      key={idx}
-                      to={item.page}
-                      className={
-                        'block lg:inline-block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100 cursor-pointer'
-                      }
-                      activeClass='active'
-                      spy={true}
-                      smooth={true}
-                      offset={-100}
-                      duration={500}
-                      onClick={() => setNavbar(!navbar)}
-                    >
-                      {item.label}
-                    </ScrollLink>
-                  );
-                }
-              })}
-              {currentTheme === 'dark' ? (
-                <button
-                  onClick={() => setTheme('light')}
-                  className='bg-slate-100 p-2 rounded-xl'
-                >
-                  <RiSunLine size={25} color='black' />
-                </button>
-              ) : (
-                <button
-                  onClick={() => setTheme('dark')}
-                  className='bg-slate-100 p-2 rounded-xl'
-                >
-                  <RiMoonFill size={25} />
-                </button>
-              )}
-            </div>
-          </div>
+            {currentTheme === 'dark' ? <RiSunLine size={18} /> : <RiMoonFill size={18} />}
+          </button>
+        </nav>
+
+        {/* Mobile controls */}
+        <div className='flex items-center gap-2 md:hidden'>
+          <button
+            onClick={() => setTheme(currentTheme === 'dark' ? 'light' : 'dark')}
+            className='p-1.5 rounded-md text-neutral-500 hover:bg-neutral-100 dark:hover:bg-stone-800 transition-colors'
+            aria-label='Toggle theme'
+          >
+            {currentTheme === 'dark' ? <RiSunLine size={18} /> : <RiMoonFill size={18} />}
+          </button>
+          <button
+            className='p-1.5 text-neutral-600 dark:text-neutral-300 rounded-md hover:bg-neutral-100 dark:hover:bg-stone-800 transition-colors'
+            onClick={() => setNavbar(!navbar)}
+            aria-label='Toggle menu'
+          >
+            {navbar ? <IoMdClose size={22} /> : <IoMdMenu size={22} />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile menu */}
+      {navbar && (
+        <div className='md:hidden border-t border-neutral-100 dark:border-stone-800 py-4 flex flex-col space-y-4 px-2'>
+          {NAV_ITEMS.map((item, idx) => (
+            <ScrollLink
+              key={idx}
+              to={item.page}
+              spy={true}
+              smooth={true}
+              offset={-56}
+              duration={400}
+              onClick={() => setNavbar(false)}
+              className='text-sm text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors cursor-pointer py-1'
+            >
+              {item.label}
+            </ScrollLink>
+          ))}
+          <a
+            href='https://mayurlalwani.hashnode.dev'
+            target='_blank'
+            rel='noreferrer'
+            className='text-sm text-neutral-600 dark:text-neutral-300 py-1'
+            onClick={() => setNavbar(false)}
+          >
+            Blog
+          </a>
+        </div>
+      )}
     </header>
   );
 }
